@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyMed+</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" type="imagex/png" href="assets/imgs/logo.png">
 </head>
 <body>
-    <header>
+    <header id="navbar">
         <img src="assets/imgs/logo.png" class="logo">
 
         <div class="buttons">
@@ -18,7 +20,7 @@
         </div>
 
         <div class="login-container">
-            <button>LOG-IN</button>
+            <a href="login.html">ENTRAR</a>
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 18C3 26.2845 9.7155 33 18 33C26.2845 33 33 26.2845 33 18C33 9.7155 26.2845 3 18 3C9.7155 3 3 9.7155 3 18Z" stroke="#D9D9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M19.4999 3.075C19.4999 3.075 23.9999 9 23.9999 18C23.9999 27 19.4999 32.925 19.4999 32.925M16.4999 32.925C16.4999 32.925 11.9999 27 11.9999 18C11.9999 9 16.4999 3.075 16.4999 3.075M3.94495 23.25H32.0549M3.94495 12.75H32.0549" stroke="#D9D9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -91,7 +93,7 @@
         <div class="background schedule"></div>
 
         <div class="info-image schedule"></div>
-        
+
         <div class="side">
             <div class="texts">
                 <h2>AGENDE SUA CONSULTA SEM COMPLICAÇÃO</h2>
@@ -106,4 +108,22 @@
     </div>
 
 </body>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Rolando para baixo, esconde a nav-bar
+            navbar.classList.add("hidden");
+        } else {
+            // Rolando para cima ou no topo da página, mostra a nav-bar
+            navbar.classList.remove("hidden");
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Impede valores negativos
+    });
+</script>
 </html>

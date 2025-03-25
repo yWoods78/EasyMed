@@ -1,42 +1,19 @@
-@font-face {
-    font-family: 'Montserrat-Bold';
-    src: url('assets/fonts/Montserrat-Bold.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat-Regular';
-    src: url('assets/fonts/Montserrat-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat-Thin';
-    src: url('assets/fonts/Montserrat-Thin.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-}
-
-body,html {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-size: 62.5%;
-}
 
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    background-color: transparent;
     width: 100vw;
     height: 10vh;
+    top: 0;
+    transition: top 0.3s;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(34, 143, 178, 0.7) 0%, rgba(17, 82, 104, 0.0) 100%);
+}
+
+.hidden {
+    top: -100px;
 }
 
 header img {
@@ -47,7 +24,7 @@ header img {
 header .buttons {
     display: flex;
     align-items: center;
-    border: 2px solid #D9D9D9;
+    border: 2px solid var(--offwhite);
     gap: 5px;
     border-radius: 10px;
     padding: 5px;
@@ -59,8 +36,8 @@ header .buttons button {
     border: none;
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 2rem;
-    color: #D9D9D9;
+    font-size: var(--fs-20);
+    color: var(--offwhite);
     padding: 10px;
     cursor: pointer;
 }
@@ -70,17 +47,18 @@ header .login-container {
     align-items: center;
 }
 
-header .login-container button {
+header .login-container button,header .login-container a {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 2rem;
-    color: #D9D9D9;
+    font-size: var(--fs-20);
+    color: var(--offwhite);
     background-color: transparent;
-    border: 2px solid #D9D9D9;
+    border: 2px solid var(--offwhite);
     border-radius: 10px;
     padding: 5px 10px;
     margin: 0 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
@@ -135,7 +113,7 @@ header .login-container button {
 .page .texts h1 {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 9rem;
+    font-size: 5.625rem;
     color: white;
     line-height: 0px;
 }
@@ -143,7 +121,7 @@ header .login-container button {
 .page .texts span {
     font-family: "Montserrat-Regular";
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: var(--fs-24);
     color: white;
     text-align: center;
     width: 30%;
@@ -160,10 +138,10 @@ header .login-container button {
 .page .buttons .btn {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 2.4rem;
-    color: #105166;
-    background-color: #D9D9D9;
-    border: 3px solid #D9D9D9;
+    font-size: var(--fs-24);
+    color: var(--blue);
+    background-color: var(--offwhite);
+    border: 3px solid var(--offwhite);
     border-radius: 10px;
     padding: 10px 20px;
     margin: 0 10px;
@@ -173,10 +151,10 @@ header .login-container button {
 .page .buttons .btn-2 {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 2.4rem;
-    color: #D9D9D9;
+    font-size: var(--fs-24);
+    color: var(--offwhite);
     background-color: transparent;
-    border: 3px solid #D9D9D9;
+    border: 3px solid var(--offwhite);
     border-radius: 10px;
     padding: 10px 20px;
     margin: 0 10px;
@@ -201,7 +179,7 @@ header .login-container button {
 .divider .texts h2 {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 4rem;
+    font-size: var(--fs-40);
     color: #197C9C;
     line-height: 40px;
     margin: 0 auto;
@@ -210,7 +188,7 @@ header .login-container button {
 .divider .texts span {
     font-family: "Montserrat-Regular";
     font-weight: 500;
-    font-size: 2rem;
+    font-size: var(--fs-20);
     color: #0B3441;
 }
 
@@ -228,7 +206,7 @@ header .login-container button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(67.53deg, #105166 -53.97%, #20A2CC 101.25%);
+    background: linear-gradient(67.53deg, var(--blue) -53.97%, #20A2CC 101.25%);
     padding: 30px 15px;
     border-radius: 10px;
     
@@ -238,7 +216,7 @@ header .login-container button {
 .divider .cards .card h2 {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 2.6rem;
+    font-size: var(--fs-26);
     color: white;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -247,7 +225,7 @@ header .login-container button {
 .divider .cards .card span {
     font-family: "Montserrat-Regular";
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: var(--fs-14);
     color: white;
 }
 
@@ -282,7 +260,7 @@ header .login-container button {
 .info-page .side .texts h1 {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 8.5rem;
+    font-size: 5.3125rem;
     color: white;
     line-height: 0px;
 }
@@ -290,7 +268,7 @@ header .login-container button {
 .info-page .side .texts h2 {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 4.6rem;
+    font-size: 2.875rem;
     color: white;
     margin: 0 auto;
 }
@@ -298,9 +276,9 @@ header .login-container button {
 .info-page .side button {
     font-family: "Montserrat-Bold";
     font-weight: 800;
-    font-size: 2.4rem;
+    font-size: var(--fs-24);
     color: #197C9C;
-    background-color: #D9D9D9;
+    background-color: var(--offwhite);
     border-radius: 10px;
     padding: 10px 20px;
     margin: 0 10px;
@@ -312,7 +290,7 @@ header .login-container button {
 .info-page .side .texts span {
     font-family: "Montserrat-Thin";
     font-weight: 800;
-    font-size: 2rem;
+    font-size: var(--fs-20);
     color: rgba(255, 255, 255, 0.801);
     width: 80%;
     text-align: left;
@@ -321,7 +299,6 @@ header .login-container button {
 .info-page .info-image{
     width: 30%;
     height: 80%;
-    background-color: red;
     border-radius: 10px;
     box-shadow: 0px 4px 10px 0px #00000040;
     
@@ -337,5 +314,3 @@ header .login-container button {
     background-image: url('assets/imgs/schedule2.jpeg');
     background-size: cover;
 }
-
-

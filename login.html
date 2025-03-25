@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="assets/imgs/logo2.png" alt="" class="logo">
+            <div class="inputs">
+                <div class="input-container">
+                    <label for="user">Usuário</label>
+                    <input type="text" id="user" name="user" placeholder="Digite seu CPF, e-mail ou número de telefone">
+                </div>
+                <div class="input-container">
+                    <label for="pass">Senha</label>
+                    <input type="password" id="pass" name="password" placeholder="Digite sua senha">
+                    <a href="http://" target="_blank" rel="noopener noreferrer" class="resetPass">ESQUECI MINHA SENHA</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn join">ENTRAR</button>
+                <button class="btn signup reversed">CADASTRE-SE</button>
+            </div>
+
+            <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24_773)">
+                <path d="M20.5532 1.94055C14.6582 3.98558 9.5743 7.86713 6.04835 13.015C2.52239 18.163 0.740193 24.3059 0.963521 30.5416C1.18685 36.7772 3.40394 42.7769 7.28913 47.6594C11.1743 52.5419 16.5228 56.0498 22.549 57.6679C27.4346 58.9285 32.5533 58.9839 37.465 57.8292C41.9145 56.8298 46.0282 54.6919 49.4032 51.625C52.916 48.3355 55.4657 44.1508 56.7782 39.5208C58.2049 34.4858 58.4588 29.1909 57.5204 24.0425H30.0854V35.423H45.9739C45.6563 37.2382 44.9759 38.9706 43.9732 40.5166C42.9705 42.0626 41.6662 43.3904 40.1384 44.4205C38.1982 45.7039 36.0112 46.5675 33.7175 46.9557C31.4172 47.3834 29.0577 47.3834 26.7574 46.9557C24.4259 46.4737 22.2204 45.5114 20.2812 44.1302C17.166 41.925 14.8268 38.7922 13.5976 35.1787C12.3476 31.4977 12.3476 27.5069 13.5976 23.8259C14.4726 21.2456 15.9191 18.8963 17.829 16.9533C20.0148 14.6889 22.7819 13.0703 25.827 12.2751C28.8721 11.4799 32.0773 11.5388 35.0911 12.4453C37.4455 13.168 39.5984 14.4307 41.3783 16.1328C43.1698 14.3505 44.9583 12.5636 46.7436 10.7721C47.6655 9.80875 48.6704 8.89148 49.5784 7.90508C46.8615 5.37673 43.6723 3.40936 40.1937 2.1157C33.8591 -0.184423 26.9278 -0.246237 20.5532 1.94055Z" fill="white"/>
+                <path d="M20.5532 1.94053C26.9274 -0.247741 33.8586 -0.187555 40.1938 2.11107C43.673 3.41352 46.8607 5.39036 49.5739 7.92811C48.652 8.91451 47.6794 9.83639 46.7391 10.7951C44.9507 12.5805 43.1637 14.3597 41.3784 16.1328C39.5985 14.4307 37.4455 13.168 35.0912 12.4453C32.0784 11.5356 28.8732 11.4733 25.8274 12.2653C22.7815 13.0572 20.0126 14.6728 17.8245 16.9348C15.9145 18.8778 14.4681 21.2271 13.5931 23.8074L4.03784 16.4094C7.45804 9.62694 13.3799 4.43892 20.5532 1.94053Z" fill="#E33629"/>
+                <path d="M1.5027 23.7383C2.01628 21.1929 2.86894 18.728 4.03786 16.4094L13.5931 23.8258C12.3431 27.5069 12.3431 31.4977 13.5931 35.1787C10.4096 37.6371 7.22447 40.1077 4.03786 42.5906C1.1116 36.7658 0.219141 30.1292 1.5027 23.7383Z" fill="#F8BD00"/>
+                <path d="M30.0853 24.0379H57.5203C58.4588 29.1863 58.2049 34.4812 56.7782 39.5162C55.4656 44.1462 52.9159 48.3309 49.4032 51.6204C46.3195 49.2143 43.222 46.8267 40.1384 44.4206C41.6672 43.3893 42.9721 42.0601 43.9748 40.5124C44.9775 38.9648 45.6574 37.2306 45.9738 35.4138H30.0853C30.0807 31.6249 30.0853 27.8314 30.0853 24.0379Z" fill="#587DBD"/>
+                <path d="M4.0332 42.5906C7.21982 40.1323 10.4049 37.6617 13.5884 35.1788C14.8201 38.7934 17.1626 41.9264 20.2813 44.1302C22.2264 45.505 24.4367 46.4594 26.7713 46.9327C29.0716 47.3604 31.4311 47.3604 33.7314 46.9327C36.025 46.5444 38.2121 45.6809 40.1523 44.3975C43.2359 46.8036 46.3334 49.1913 49.4171 51.5974C46.0425 54.6659 41.9288 56.8054 37.4788 57.8062C32.5671 58.9609 27.4485 58.9055 22.5629 57.6449C18.6989 56.6132 15.0896 54.7944 11.9613 52.3026C8.65024 49.6738 5.94589 46.361 4.0332 42.5906Z" fill="#319F43"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_24_773">
+                <rect width="59" height="59" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>  
+        </div>
+        <div class="signup-box">
+            <img src="assets/imgs/logo2.png" alt="" class="logo">
+            <div class="inputs">
+                <div class="input-container">
+                    <label for="CPF">CPF</label>
+                    <input type="text" id="name" name="name" placeholder="*Apenas números">
+                </div>
+                <div class="input-container">
+                    <label for="pass">Senha</label>
+                    <input type="text" id="pass" name="pass" placeholder="Letras maíusculas e minusculas, @#$%">
+                </div>
+                <div class="input-container">
+                    <label for="pass">Confirmar Senha</label>
+                    <input type="text" id="confirm-pass" name="confirm_pass" placeholder="">
+                </div>
+                <div class="input-container">
+                    <label for="pass">Número de telefone</label>
+                    <input type="tel" id="pass" name="tel" placeholder="(DDD) 9 + Número de telefone">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn finish">CADASTRAR</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const loginBox = document.querySelector('.login-box');
+    const signupBox = document.querySelector('.signup-box');
+    const signupBtn = document.querySelector('.signup');
+    const finishBtn = document.querySelector('.finish');
+    const joinBtn = document.querySelector('.join');
+
+    signupBtn.addEventListener('click', () => {
+        loginBox.style.display = 'none';
+        signupBox.style.display = 'flex';
+    });
+
+    joinBtn.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+
+    finishBtn.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+</script>
+</html>

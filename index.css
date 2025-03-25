@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('assets/fonts/Montserrat-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('assets/fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('assets/fonts/Montserrat-Thin.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --offwhite: #D9D9D9;
+    --blue: #197C9C;   
+
+    --fs-10: 0.625rem;
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem;
+    --fs-16: 1rem;
+    --fs-20: 1.25rem;
+    --fs-24: 1.5rem;
+    --fs-26: 1.625rem;
+    --fs-28: 1.75rem;
+    --fs-30: 1.875rem;
+    --fs-32: 2rem;
+    --fs-34: 2.125rem;
+    --fs-36: 2.25rem;
+    --fs-38: 2.375rem;
+    --fs-40: 2.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
