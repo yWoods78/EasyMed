@@ -263,7 +263,8 @@ header .login-container button,header .login-container a {
     font-weight: 800;
     font-size: 5.3125rem;
     color: white;
-    line-height: 0px;
+    /* line-height: 0px; */
+    margin: 0;
 }
 
 .info-page .side .texts h2 {
