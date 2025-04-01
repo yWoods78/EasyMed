@@ -115,7 +115,8 @@ header .login-container button,header .login-container a {
     font-weight: 800;
     font-size: 5.625rem;
     color: white;
-    line-height: 0px;
+    /* line-height: 0px; */
+    margin: 0;
 }
 
 .page .texts span {
