@@ -9,22 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 </head>
 <body>
     <div class="login-container">
         <div class="login-box">
             <img src="assets/imgs/logo2.png" alt="" class="logo">
-            <div class="inputs">
+            <form class="inputs">
                 <div class="input-container">
                     <label for="user">Usuário</label>
-                    <input type="text" id="user" name="user" placeholder="Digite seu CPF, e-mail ou número de telefone">
+                    <input type="text" id="user" name="user" placeholder="Digite seu CPF">
                 </div>
                 <div class="input-container">
                     <label for="pass">Senha</label>
                     <input type="password" id="pass" name="password" placeholder="Digite sua senha">
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="resetPass">ESQUECI MINHA SENHA</a>
                 </div>
-            </div>
+            </form>
             <div class="buttons">
                 <button class="btn join">ENTRAR</button>
                 <button class="btn signup reversed">CADASTRE-SE</button>
@@ -47,30 +49,35 @@
         </div>
         <div class="signup-box">
             <img src="assets/imgs/logo2.png" alt="" class="logo">
-            <div class="inputs">
+            <form class="inputs">
                 <div class="input-container">
                     <label for="CPF">CPF</label>
-                    <input type="text" id="name" name="name" placeholder="*Apenas números">
+                    <input type="text" id="cpf" name="name" placeholder="*Apenas números">
                 </div>
                 <div class="input-container">
-                    <label for="pass">Senha</label>
-                    <input type="text" id="pass" name="pass" placeholder="Letras maíusculas e minusculas, @#$%">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name">
                 </div>
                 <div class="input-container">
-                    <label for="pass">Confirmar Senha</label>
-                    <input type="text" id="confirm-pass" name="confirm_pass" placeholder="">
+                    <label for="birthdate">Data de nascimento</label>
+                    <input type="date" id="birthdate" name="birthdate">
                 </div>
                 <div class="input-container">
                     <label for="pass">Número de telefone</label>
-                    <input type="tel" id="pass" name="tel" placeholder="(DDD) 9 + Número de telefone">
+                    <input type="tel" id="tel" name="tel" placeholder="(DDD) 9 + Número de telefone">
                 </div>
-            </div>
+                <div class="input-container">
+                    <label for="pass">Senha</label>
+                    <input type="text" id="sign-pass" name="pass" placeholder="Letras maíusculas e minusculas, @#$%">
+                </div>
+            </form>
             <div class="buttons">
                 <button class="btn finish">CADASTRAR</button>
             </div>
         </div>
     </div>
 </body>
+<script src="login.js"></script>
 <script>
     const loginBox = document.querySelector('.login-box');
     const signupBox = document.querySelector('.signup-box');
@@ -83,12 +90,12 @@
         signupBox.style.display = 'flex';
     });
 
-    joinBtn.addEventListener('click', () => {
-        window.location.href = 'index.html';
-    });
+    // joinBtn.addEventListener('click', () => {
+    //     window.location.href = 'index.html';
+    // });
 
-    finishBtn.addEventListener('click', () => {
-        window.location.href = 'index.html';
-    });
+    // finishBtn.addEventListener('click', () => {
+    //     window.location.href = 'index.html';
+    // });
 </script>
 </html>

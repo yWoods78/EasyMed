@@ -1,0 +1,25 @@
+{
+  "name": "easymed",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yWoods78/EasyMed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yWoods78/EasyMed/issues"
+  },
+  "homepage": "https://github.com/yWoods78/EasyMed#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0"
+  }
+}
