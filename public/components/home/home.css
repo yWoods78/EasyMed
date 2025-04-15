@@ -75,21 +75,21 @@ header .login-container button,header .login-container a {
     transform: scaleX(-1);
     background: 
         linear-gradient(180deg, rgba(34, 143, 178, 0.7) 0%, rgba(17, 82, 104, 0.7) 100%),
-        url('assets/imgs/initial.jpeg');
+        url('../../assets/imgs/initial.jpeg');
     background-size: cover;
 }
 
 .info-page .background.mission {
     background: 
         linear-gradient(180deg, rgba(34, 143, 178, 0.7) 0%, rgba(17, 82, 104, 0.7) 100%),
-        url('assets/imgs/mission.jpeg');
+        url('../../assets/imgs/mission.jpeg');
     background-size: cover;
 }
 
 .info-page .background.schedule {
     background: 
         linear-gradient(180deg, rgba(34, 143, 178, 0.7) 0%, rgba(17, 82, 104, 0.7) 100%),
-        url('assets/imgs/schedule.jpeg');
+        url('../../assets/imgs/schedule.jpeg');
     background-size: cover;
 }
 
@@ -307,12 +307,12 @@ header .login-container button,header .login-container a {
 }
 
 .info-page .info-image.mission{
-    background-image: url('assets/imgs/mission2.jpeg');
+    background-image: url('../../assets/imgs/mission2.jpeg');
     background-size: cover;
 }
 
 
 .info-page .info-image.schedule{
-    background-image: url('assets/imgs/schedule2.jpeg');
+    background-image: url('../../assets/imgs/schedule2.jpeg');
     background-size: cover;
 }
