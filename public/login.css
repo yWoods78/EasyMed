@@ -198,3 +198,9 @@
     border: 3px solid #209FC8;
     color: #209FC8;
 }
+
+.checkbox-container {
+    font-family: "Montserrat-Regular";
+    color: #1D8EB2;
+    margin-top: -15px;
+}
