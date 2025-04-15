@@ -19,8 +19,7 @@ $(document).on("click", ".finish", function (e) {
         contentType: "application/json",
         data: JSON.stringify(userData),
         success: function (response) {
-            console.log("Usuário cadastrado com sucesso:", response);
-            alert("Cadastro realizado com sucesso!");
+            window.location.href = "../dashboard/dashboard.html";
         },
         error: function (xhr, status, error) {
             console.error("Erro no cadastro:", error);
@@ -43,10 +42,7 @@ $(document).on("click", ".join", function (e) {
         contentType: "application/json",
         data: JSON.stringify(userData),
         success: function (response) {
-            console.log("Login bem-sucedido:", response);
-            alert("Login realizado com sucesso!");
-            // Redirecionar para outra página se quiser
-            // window.location.href = "painel.html";
+            window.location.href = "../dashboard/dashboard.html";
         },
         error: function (xhr, status, error) {
             console.error("Erro no login:", error);

@@ -1,0 +1,383 @@
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #E0E6E8;
+    justify-content: start;
+    flex-direction: row;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 4%;
+    height: 100%;
+    background: white;
+    transition: width 0.3s;
+}
+
+nav .navButton {
+    display: none;
+    width: 40px;
+    height: 54px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background: #277D99;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    align-self: flex-end;
+    position: absolute;
+}
+
+nav .navButton2 {
+    height: 10%;
+    background: #277D99;
+    border: none;
+}
+
+nav.active {
+    display: flex;
+    padding-top: 2%;
+}
+
+nav img {
+    visibility: hidden;
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+nav.active {
+    width: 20%;
+    transition: width 0.3s;
+}
+
+nav.active .navButton {
+    display: flex;
+}
+
+nav.active .navButton2 {
+    display: none;
+}
+
+nav.active .buttons span {
+    display: flex;
+}
+
+nav.active img {
+    visibility: visible;
+}
+
+nav .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 40%;
+}
+
+nav .buttons button {
+    display: flex;
+    color: #277D99;
+    font-family: "Montserrat-regular";
+    font-weight: 500;
+    font-size: 32px;
+    align-items: center;
+    background: transparent;
+    border: none;
+    gap: 20px;
+    padding: 10px;
+    width: 80%;
+    height: 20%;
+    cursor: pointer;
+}
+
+nav .buttons button.active {
+    background: #277D99;
+    color: white;
+    border-radius: 15px;
+}
+
+button.active > svg path {
+    fill: white;
+}
+
+nav .buttons span {
+    display: none;
+}
+
+.topbar {
+    display: flex;
+    width: 96%;
+    height: 10%;
+    background: #277D99;
+    justify-content: space-between;
+    padding: 0 2%;
+    align-items: center;
+}
+
+.topbar .searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+    background: #CCDCE2;
+    border: 2px solid #89AAB7;
+    height: 60%;
+    border-radius: 15px;
+    padding: 0px 20px;
+}
+
+.topbar .searchbar input {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+    font-family: "Montserrat-regular";
+    font-weight: 800;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+    color: black;
+}
+
+.topbar .searchbar input::placeholder {
+    color: #89AAB7;
+}
+
+.topbar .user-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    height: 50%;
+    background: #CCDCE2;
+    border-radius: 15px;
+}
+
+.topbar .user-container span {  
+    font-family: Montserrat-bold;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -4%;
+    text-align: center;
+    color: #277D99;
+    width: 100%;
+
+}
+
+.topbar .user-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.services {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+.services h1 {
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    margin: 0;
+    
+}
+
+.services h2 {
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #277D99;
+
+
+}
+
+.services h2 {
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #277D99;
+
+
+}
+
+.services .service-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.services .service-buttons button {
+    width: 12%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    border: none;
+}
+
+.services .service-buttons button.active {
+    background: #277D99;
+}
+
+.services .service-buttons button .icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A6D3E2;
+    border-radius: 50%;
+}
+
+.services .service-buttons button.active .icon {
+
+    background: white;
+}
+
+.services .service-buttons button span {
+    font-family: Montserrat-Regular;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: black;
+}
+
+.services .service-buttons button.active span {
+    color: white;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 55%;
+    padding-left: 2%;
+    margin: 0;
+
+}
+
+.schedule-container h2 {
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #277D99;
+}
+
+.schedule-container .schedules {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.schedule-container .schedules .schedule {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    min-height: 30%;
+    background: white;
+    border: 2px solid #CCDCE2;
+    border-radius: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.schedule-container .schedules .schedule .left-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 20px;
+}
+
+.schedule-container .schedules .schedule .left-infos img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.schedule-container .schedules .schedule .left-infos .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schedule-container .schedules .schedule .left-infos .infos span {
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #277D99;
+}
+
+.schedule-container .schedules .schedule .left-infos .infos .date-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.schedule-container .schedules .schedule .left-infos .infos .date-infos div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.schedule-container .schedules .schedule .left-infos .infos .date-infos div span {
+    font-family: Montserrat-Regular;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    color: #000000;
+}
+
+.schedule-container .schedules .schedule button {
+    border: 2px solid #277D99;
+    background: #F8F8F8;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #277D99;
+    font-family: Montserrat-Regular;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    cursor: pointer;
+}
