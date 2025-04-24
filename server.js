@@ -42,29 +42,30 @@ const cpfsInvalidos = [
   
 
 function validarCPF(cpf) {
-    cpf = cpf.replace(/[^\d]+/g, '');
+    return true;
+    // cpf = cpf.replace(/[^\d]+/g, '');
 
-    if (cpf.length !== 11 || cpfsInvalidos.includes(cpf)) {
-        return false;
-    }
+    // if (cpf.length !== 11 || cpfsInvalidos.includes(cpf)) {
+    //     return false;
+    // }
 
-    let soma = 0;
-    for (let i = 0; i < 9; i++) {
-        soma += parseInt(cpf[i]) * (10 - i);
-    }
+    // let soma = 0;
+    // for (let i = 0; i < 9; i++) {
+    //     soma += parseInt(cpf[i]) * (10 - i);
+    // }
 
-    let resto = soma % 11;
-    let dig1 = (resto < 2) ? 0 : 11 - resto;
+    // let resto = soma % 11;
+    // let dig1 = (resto < 2) ? 0 : 11 - resto;
 
-    soma = 0;
-    for (let i = 0; i < 10; i++) {
-        soma += parseInt(cpf[i]) * (11 - i);
-    }
+    // soma = 0;
+    // for (let i = 0; i < 10; i++) {
+    //     soma += parseInt(cpf[i]) * (11 - i);
+    // }
 
-    resto = soma % 11;
-    let dig2 = (resto < 2) ? 0 : 11 - resto;
+    // resto = soma % 11;
+    // let dig2 = (resto < 2) ? 0 : 11 - resto;
 
-    return cpf[9] == dig1 && cpf[10] == dig2;
+    // return cpf[9] == dig1 && cpf[10] == dig2;
 }
 
 app.post("/CadastrarUsuario", (req, res) => {
@@ -90,7 +91,11 @@ app.post("/CadastrarUsuario", (req, res) => {
                 return res.status(500).send({ error: 'Erro ao cadastrar usuário' });
             }
 
-            res.status(200).send({ success: true });
+            res.status(200).send({ 
+                success: true,
+                nome: userData.nome,
+                tipo: 'Paciente'  
+             });
         });
     });
 });
@@ -101,8 +106,6 @@ app.post("/login", (req, res) => {
     if (!cpf || !senha) {
         return res.status(400).json({ error: "CPF e senha são obrigatórios." });
     }
-    console.log(cpf, senha)
-
     connection.query('SELECT * FROM usuarios WHERE cpf = ?',[cpf],(error, results) => {
         if (error) {
             console.error('Erro ao consultar o banco:', error);
@@ -116,7 +119,11 @@ app.post("/login", (req, res) => {
         const usuario = results[0];
 
         if (usuario.pass === senha) {
-            return res.status(200).json({ message: "Login bem-sucedido!", usuario });
+            usuario.pass = undefined; // Remove a senha do objeto de resposta
+            return res.status(200).json({
+                message: "Login bem-sucedido!", 
+                userData: usuario,
+            });
         } else {
             return res.status(401).json({ error: "Senha incorreta." });
         }

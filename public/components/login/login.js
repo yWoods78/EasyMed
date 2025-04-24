@@ -19,6 +19,7 @@ $(document).on("click", ".finish", function (e) {
         contentType: "application/json",
         data: JSON.stringify(userData),
         success: function (response) {
+            localStorage.setItem("userData", JSON.stringify(userData));
             window.location.href = "../dashboard/dashboard.html";
         },
         error: function (xhr, status, error) {
@@ -42,6 +43,8 @@ $(document).on("click", ".join", function (e) {
         contentType: "application/json",
         data: JSON.stringify(userData),
         success: function (response) {
+            localStorage.setItem("userData", JSON.stringify(response.userData));
+
             window.location.href = "../dashboard/dashboard.html";
         },
         error: function (xhr, status, error) {

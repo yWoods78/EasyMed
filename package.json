@@ -18,6 +18,7 @@
   "homepage": "https://github.com/yWoods78/EasyMed#readme",
   "description": "",
   "dependencies": {
+    "@glidejs/glide": "^3.7.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "mysql2": "^3.14.0"
